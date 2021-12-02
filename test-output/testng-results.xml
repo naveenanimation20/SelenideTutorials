@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8675" started-at="2021-12-02T12:05:25Z" finished-at="2021-12-02T12:05:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8675" started-at="2021-12-02T12:05:25Z" finished-at="2021-12-02T12:05:34Z">
+      <class name="org.tests.WaitConcept">
+        <test-method status="PASS" signature="waitTest()[pri:0, instance:org.tests.WaitConcept@1bce4f0a]" name="waitTest" duration-ms="8660" started-at="2021-12-02T12:05:25Z" finished-at="2021-12-02T12:05:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitTest -->
+      </class> <!-- org.tests.WaitConcept -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,367 @@
+<html lang="en"><head>
+<meta charset="utf-8">
+
+<title>Scripts: Responsive IFrames for embedding webpages</title>
+<meta name="KeyWords" content="wordpress, embed, iframes, frames, forum, calendar, auto gallery, applications, scripts, frames, iframes, iframes, iframes, tutorial">
+<meta name="Description" content="Using IFrame HTML and CSS code to embed applications and webages into another webpage. Allwebco Design Corporation support.">
+
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="style-support.css" type="text/css">
+<link rel="stylesheet" href="media-queries.css" type="text/css">
+
+<style type="text/css">
+
+.framesample {
+  display: block;
+  width: 100%;  /* RESPONSIVE WIDTH */
+  max-width: 400px;
+  height: 300px;
+  overflow: auto;  /* EDIT TO hidden FOR NO SCROLLBAR */
+  border: #999999 1px solid;
+  margin: 0px;
+  padding: 0px;
+  }
+
+.framesample2 {
+  width: 100%;
+  max-width: 550px;
+  height: 550px;
+  }
+
+</style>
+
+<script src="https://partner.googleadservices.com/gampad/cookie.js?domain=allwebco-templates.com&amp;callback=_gfp_s_&amp;client=ca-pub-8445032878029583"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202111020101/show_ads_impl_fy2019.js?bust=31063412" id="google_shimpl"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="javascripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="javascripts/javascripts.js"></script>
+
+<meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/OOU4XAFfeAV4kM4+W9WBwNAHqq/bvtrRcJ1wpnNyO/i076BSUy1d14l2kBEgVmEuvxojSpD23172C6hBg2AQYAAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwrB+XVH/KV6HfZNVtSEqlUJi3yUbtCp0/TJRj+38NDIw19/9P1h7ECTtdLdhIzG0Bsl4n/0rVmttJtGUCcewgAAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="Ax15QOERqai2A5XWrDY38Eg07xh2T0pkhpDPJuDlxr7D2Ka8wHvklgK7tTPZOnT+8H31lwHto5JpvYV8jRn1WgIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/OOU4XAFfeAV4kM4+W9WBwNAHqq/bvtrRcJ1wpnNyO/i076BSUy1d14l2kBEgVmEuvxojSpD23172C6hBg2AQYAAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwrB+XVH/KV6HfZNVtSEqlUJi3yUbtCp0/TJRj+38NDIw19/9P1h7ECTtdLdhIzG0Bsl4n/0rVmttJtGUCcewgAAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="Ax15QOERqai2A5XWrDY38Eg07xh2T0pkhpDPJuDlxr7D2Ka8wHvklgK7tTPZOnT+8H31lwHto5JpvYV8jRn1WgIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><link rel="preload" href="https://adservice.google.co.in/adsid/integrator.js?domain=allwebco-templates.com" as="script"><script type="text/javascript" src="https://adservice.google.co.in/adsid/integrator.js?domain=allwebco-templates.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=allwebco-templates.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=allwebco-templates.com"></script><link rel="preload" href="https://adservice.google.co.in/adsid/integrator.js?domain=allwebco-templates.com" as="script"><script type="text/javascript" src="https://adservice.google.co.in/adsid/integrator.js?domain=allwebco-templates.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=allwebco-templates.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=allwebco-templates.com"></script></head>
+
+<body>
+<div class="pagewrapper" style="height: auto !important;">
+
+<script type="text/javascript" src="javascripts/header-support.js"></script><div class="printhide header"><a href="https://allwebco-templates.com/support/"><img src="https://allwebco-templates.com/support/picts/logo.png" width="300" height="65" class="h-img1" alt="Allwebco Design Corporation"></a><a href="https://allwebcodesign.com/" rel="nofollow"><img src="https://allwebco-templates.com/support/picts/header-developer-off.png" width="300" height="65" onmouseover="this.src='https://allwebco-templates.com/support/picts/header-developer-on.png'" onmouseout="this.src='https://allwebco-templates.com/support/picts/header-developer-off.png'" class="h-img2" alt="Developer Grade Websites"></a><div class="floatclear headerclear"></div></div><div id="searchbar" class="printhide"><form method="post" action="https://allwebco-templates.com/cgi-bin/websearch.pl" class="formmargin"><input type="hidden" name="hits" value="15"><input type="hidden" name="DateRange" value="All"><input type="hidden" name="boolean" value="any terms"><table class="search-top"><tbody><tr><td><input type="text" name="terms" size="22" maxlength="150" class="stterms" value=""><br></td><td><input type="image" name="sbbutton" width="28" height="28" src="https://allwebco-templates.com/support/menu-icons/sbbutton-off.png" class="sbbutton" onmouseover="this.src='https://allwebco-templates.com/support/menu-icons/sbbutton-on.png'" onmouseout="this.src='https://allwebco-templates.com/support/menu-icons/sbbutton-off.png'" alt="Submit"><br></td></tr></tbody></table></form></div><div class="printonly"><a href="https://allwebco-templates.com/support/"><img src="https://allwebco-templates.com/support/picts/logo-PRINT.jpg" width="300" height="65" class="h-img1" alt="Allwebco Design Corporation"></a></div>
+
+<script type="text/javascript" src="javascripts/menu-support.js"></script><div class="printhide"><div class="menubar-color"><div class="menubar"><div id="menu-box"><div id="menu-top"><a href="javascript:toggleDiv('menu-sub');"><img src="https://allwebco-templates.com/support/menu-icons/menu-icon.png" width="75" height="50" class="menu-icon" alt="Open Menu"></a></div><div id="menu-sub"><a href="https://allwebco-templates.com/support/" class="menu">Home</a><a href="https://allwebco-templates.com/support/about.html" class="menu">About</a><a href="https://allwebco-templates.com/support/search.html" class="menu">Search</a><a href="https://allwebcodesign.com/setup/index.htm" class="menu">HTML Templates</a><a href="http://allwebco.com/features.shtml" class="menu">Web Hosting</a><a href="https://allwebco-templates.com/support/news.html" class="menu">News</a><a href="https://allwebco-templates.com/support/links.html" class="menu">Links</a><a href="https://allwebco-templates.com/support/scripts.html" class="menu">Free Scripts &amp; Addons</a><a href="https://allwebco-templates.com/support/S_contact_us.htm" class="menu">Contact</a></div></div><div class="menu-icon-box"><div class="menuicon"><a href="javascript:toggleLayer('searchpop');"><img src="https://allwebco-templates.com/support/menu-icons/icon-search.png" alt="Search"></a></div><div class="menuicon"><a href="https://twitter.com/allwebcodesign" target="_blank"><img src="https://allwebco-templates.com/support/menu-icons/social-twitter.png" alt="Follow us on twitter"></a></div><div class="menuicon"><a href="https://www.facebook.com/allwebcodesign" target="_blank"><img src="https://allwebco-templates.com/support/menu-icons/social-facebook.png" alt="Connect on Facebook"></a></div><div class="menuicon hidemobile"><a href="https://plus.google.com/+Allwebcodesign/" target="_blank"><img src="https://allwebco-templates.com/support/menu-icons/social-googleplus.png" alt="Check us on Google Plus"></a></div><div class="menuicon"><a href="https://allwebco-templates.com/support/S_contact_us.htm" target="_top"><img src="https://allwebco-templates.com/support/menu-icons/icon-contact.png" alt="Contact Us"></a></div><div class="menuicon"><a href="https://allwebco-templates.com/support/" target="_top"><img src="https://allwebco-templates.com/support/menu-icons/icon-home.png" alt="Home"></a></div></div></div></div></div><div class="floatclear menuclear"></div><div id="searchpop" class="printhide"><form method="post" action="https://allwebco-templates.com/cgi-bin/websearch.pl" onsubmit="return submitForm(this.submitbutton)" name="application" class="formmargin"><input type="hidden" name="hits" value="15"><input type="hidden" name="DateRange" value="All"><table class="search-top"><tbody><tr><td><input type="text" name="terms" size="22" maxlength="150" class="stterms" value=""><br><input type="radio" name="boolean" value="any terms" checked="">broad <input type="radio" name="boolean" value="all terms">exact<br></td><td><input type="submit" value="Search" name="submitbutton" class="stbutton"><br></td></tr></tbody></table></form></div>
+
+<!-- C-O -->
+<div id="contentbox" class="pageheight" style="height: auto !important; min-height: 0px !important;">
+
+<!-- C-L -->
+<div id="left-content"><div class="content-area">
+
+
+
+
+
+
+<h1 class="title2">Using IFrames</h1>
+
+<h2 class="subtitle">Embedding webpages using an IFrame</h2>
+
+<div class="page-splits"></div>
+
+<img src="picts/pinned-scripts.jpg" height="108" width="108" class="float-left" alt="Sticky Note IFrame Scripts">
+
+<div class="text-nowrap">
+
+An <span class="black">IFrame</span> is HTML code that you can use to embed one HTML page, PDF page, another website, or other web safe file into a another webpage inside a window. The window can be styled using css code. IFrames do not make a website a "framed" site and do not affect SEO. This code works with HTML 4.01, HTML5 and also <span class="black">responsive web design</span>.
+
+<br><br>
+
+<span class="list-title">See Also…<br></span>
+
+<ul class="SI-list">
+
+<li> <a href="scripts.html">Free website scripts</a>
+
+</li></ul>
+
+</div>
+
+<div class="floatclear"></div>
+
+<div class="page-splits"></div>
+
+<br>
+
+
+
+
+
+
+<span class="colortitle">Sample IFrame</span><br>
+Below is an example embedded HTML webpage named "IFrame-SAMPLE.html". This example uses <span class="black">responsive</span> css code to make the IFrame window flex in width.
+
+<br><br>
+
+<iframe name="Framename" src="IFrame-SAMPLE.html" width="550" height="300" frameborder="0" scrolling="yes" class="framesample"></iframe>
+
+<br><br><br><br>
+
+<span class="smalltitle">Follow these 3 steps:</span><br>
+
+Edit the size and border of the IFrame in the step #2 css code.
+
+<br><br><br>
+
+<span class="colortitle">1.) Create page to frame</span><br>
+
+Create a new webpage called "framepage.htm" that will display inside the IFrame window.
+
+<br><br><br>
+
+<span class="colortitle">2.) Add IFrame embed code</span><br>
+Select and copy the following code. Paste it into the content area of your HTML webpage where you want the IFrame window to appear.
+
+<br><br>
+
+<form name="selecting1" style="margin: 0px;">
+<input onclick="copyit('selecting1.copyselect1')" type="button" value="Click to select all (also copies in IE)" name="copybutton" class="selectcopy"><br>
+<textarea name="copyselect1" rows="4" cols="55" wrap="soft" class="textareacode">&lt;iframe name="Framename" src="framepage.htm" width="400" height="200" frameborder="0" scrolling="auto" class="frame-area"&gt;
+&lt;/iframe&gt;
+</textarea>
+</form>
+
+<br><br>
+
+<span class="colortitle">3.) Add CSS code</span><br>
+Select, copy, and paste the following css at the bottom of your template global style .css file. The css height and width will overwrite the IFrame HTML code. Edit the following with your height, width, border and overflow options.
+
+<br><br>
+
+The following code works for both <span class="black">responsive</span> and non-responsive webpages.
+
+<br><br>
+
+<form name="selecting2" class="formmargin">
+<input onclick="copyit('selecting2.copyselect2')" type="button" value="Click to select all (also copies in IE)" name="copybutton" class="selectcopy"><br>
+<textarea name="copyselect2" rows="11" cols="55" class="textareacode">.frame-area {
+  display: block;
+  width: 100%;  /* RESPONSIVE WIDTH */
+  max-width: 400px;
+  height: 300px;
+  overflow: auto;  /* EDIT TO hidden FOR NO SCROLLBAR */
+  border: #999999 1px solid;
+  margin: 0px;
+  padding: 0px;
+  }
+</textarea>
+</form><br>
+
+If you do not have a global css file, add the above code to the head section of your webpage just before the &lt;/head&gt; tag between the following tags.
+
+<br><br>
+
+<span class="code">
+&lt;style type="text/css"&gt;<br><br>
+<span class="gray">/* css code goes here */</span><br><br>
+&lt;/style&gt;<br>
+</span>
+
+<br><br>
+
+<span class="colortitle">Notes about HTML5 compliance</span><br>
+
+The IFrame HTML code in step #1 includes backward compatible code for older HTML 4.01 web browsers like IE8. Your HTML error checker may <span class="red">flag</span> these codes as errors.
+
+<br><br>
+
+To use fully compliant HTML5 code remove the following from the HTML code:
+
+<br><br>
+
+<span class="code">frameborder="0" scrolling="auto"</span>
+
+<br><br><br>
+
+<span class="colortitle">Options</span><br>
+In the above example you can change the width and the height to any sizes you would like for your IFrame (use 100% width for responsive and edit the max-width to a fixed px number). Optionally edit the border color and width.
+
+<br><br>
+
+Edit the scrolling in the HTML to "no" or "yes". Edit the "overflow" in the css code to "visible" or "scroll" or "hidden" or "auto". You can edit the "Framename" with any name you prefer.
+
+<br><br><br>
+
+<span class="colortitle">Links to change the IFrame</span><br>
+In the HTML page that you are adding the IFrame to, you can add links to change the page inside the IFrame. These links will target the IFrame name (Framename in this example). Here is an example link:
+
+<br><br>
+
+<span class="code">
+&lt;a href="newpage.htm" target="Framename"&gt;Link Name&lt;/a&gt;
+</span>
+
+<br><br><br>
+
+<span class="colortitle">Links inside the IFramed page</span><br>
+For links you add to the page inside the IFrame you may want to target your links to have them open inside, or outside the IFrame. See <a href="S_target_link.htm">target links support</a>. The following is an example link that opens a page outside the IFrame:
+
+<br><br>
+
+<span class="code">
+&lt;a href="newpage.htm" target="_top"&gt;Link Name&lt;/a&gt;
+</span>
+
+<br><br><br>
+
+<span class="colortitle">Embedding a script, site or application into an IFrame</span><br>
+An IFrame can also be used to integrate a script such as a forum, blog, PDF files, applications such as a calendar or almost anything else you would like to show on an HTML page. To do this simply change the "src=" link in the code used in step #1. For example: instead of the IFrame embedding the "framepage.htm", you can use a full link to your forum or blog. For example "http://your-domain.com/cgi-bin/forum.cgi" would integrate a forum script named "forum.cgi" in the "cgi-bin" folder at your-domain.com.
+
+<br><br><br>
+
+<span class="colortitle">Sample website in an IFrame page</span><br>
+Below is an example of the Allwebco support website homepage embedded inside an IFrame. This code uses responsive css as outlined above.
+
+<br><br>
+
+
+<!--  ALLWEBCO SITE INSIDE AN IFRAME -->
+
+<iframe name="Framename" src="https://allwebco-templates.com/support/" width="550" height="550" frameborder="0" scrolling="yes" class="framesample framesample2">
+</iframe>
+
+
+<br><br>
+
+Below is the code that embeds the above page using the full http:// path as the IFrame "src=":
+
+
+<br><br><br>
+
+<span class="code">
+
+&lt;iframe name="Framename" src="<span class="red">https://allwebco-templates.com/support/</span>" width="550" height="550" frameborder="0" scrolling="yes" style="width: 100%;"&gt;
+&lt;/iframe&gt;
+
+</span>
+
+
+
+
+
+
+<br><br><br><br>
+
+<span class="smalltitle">Related Topics:</span><br>
+<a href="S_target_link.htm">Target links and IFrames</a><br>
+<a href="scripts.html">More Scripts</a><br>
+
+<br><br><br>
+
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 140px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8445032878029583" data-ad-slot="1386592220" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_0_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 140px; width: 560px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_0_anchor" style="border: none; height: 140px; width: 560px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:560px;height:140px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="560" height="140" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8445032878029583&amp;output=html&amp;h=140&amp;slotname=1386592220&amp;adk=2552820068&amp;adf=2831960092&amp;pi=t.ma~as.1386592220&amp;w=560&amp;fwrn=4&amp;lmt=1586562863&amp;rafmt=11&amp;psa=0&amp;format=560x140&amp;url=https%3A%2F%2Fallwebco-templates.com%2Fsupport%2FS_script_IFrame.htm&amp;flash=0&amp;wgl=1&amp;uach=WyJtYWNPUyIsIjEwLjE1LjciLCJ4ODYiLCIiLCI5NS4wLjQ2MzguNjkiLFtdLG51bGwsbnVsbCwiNjQiXQ..&amp;dt=1636285372227&amp;bpp=5&amp;bdt=1613&amp;idt=206&amp;shv=r20211103&amp;mjsv=m202111020101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Dd46ab037e5ac2190-220ac3f899ce009e%3AT%3D1636285372%3ART%3D1636285372%3AS%3DALNI_MaU1ZZE_5sDQddmfNFE1IIcDT_czA&amp;prev_fmts=250x600%2C0x0&amp;nras=1&amp;correlator=4065608478654&amp;frm=20&amp;pv=1&amp;ga_vid=1409793447.1636285372&amp;ga_sid=1636285372&amp;ga_hid=861110872&amp;ga_fc=1&amp;rplot=4&amp;u_tz=330&amp;u_his=2&amp;u_h=1120&amp;u_w=1792&amp;u_ah=1052&amp;u_aw=1792&amp;u_cd=30&amp;adx=244&amp;ady=3472&amp;biw=1366&amp;bih=689&amp;scr_x=0&amp;scr_y=724&amp;eid=31063412%2C31063247&amp;oid=2&amp;pvsid=1089397294990137&amp;pem=964&amp;eae=0&amp;fc=896&amp;brdim=22%2C45%2C22%2C45%2C1792%2C23%2C1366%2C768%2C1366%2C689&amp;vis=1&amp;rsz=o%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;btvi=2&amp;fsb=1&amp;xpc=MKNcoNu4fR&amp;p=https%3A//allwebco-templates.com&amp;dtd=1297" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CNXKz4OWhvQCFQZjYgod5n0GWg" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<br><br>
+
+</div></div>
+<!-- C-L -->
+
+
+
+
+
+
+<!-- START SIDEBAR -->
+
+<div id="sidebar-content" class="SB-background" style="height: auto !important;"><div class="content-sidebar" style="height: auto !important;">
+
+<script type="text/javascript" src="javascripts/sidebar-support.js"></script><a href="https://allwebcodesign.com/setup/mobi-templates.htm"><img src="https://allwebco-templates.com/support/picts/sidebar-responsive.jpg" height="300" width="240" alt="Responsive Website Templates"></a><br><br><a href="https://join.robinhood.com/erichv-3e54d60"><img src="https://allwebco-templates.com/support/picts/robinhood-ban.jpg" height="180" width="240" alt="Robin Hood Investing"></a><br>
+
+<br>
+
+<div class="sidebox sbw-2"><div class="sb-pad">
+
+<a href="S_script_ticker.htm">CSS3 Scrolling Ticker</a><br>
+
+<a href="S_script_marquee.htm">Marquee Scrolling Text</a><br>
+
+<a href="S_target_link.htm">Target Links</a><br>
+
+<a href="S_add_pop.htm">Popup Window Free Script</a><br>
+
+<a href="S_slideshow_new.htm">Mini Responsive Slideshow</a><br>
+
+<a href="S_script_favicon.htm">Favicon in the Address Bar</a><br>
+
+<a href="S_script_IFrame-NewsScroll.htm">Scrolling News Window</a><br>
+
+<div class="sideon">Using IFrames<br></div>
+
+<div class="sidebox-split"></div>
+
+<a href="scripts.html">Free Scripts &amp; Add-ons</a><br>
+
+</div></div>
+
+<br>
+
+<!-- START GOOGLY ADS -->
+<div class="googleads gaw-2">
+
+<div class="ga">
+<a href="https://allwebcodesign.com/website-templates/mobile-website-templates.htm" class="GOOGLElink">Mobile Responsive</a>
+Flexible website designs for smartphones and all other mobile devices.<br>
+</div>
+
+<div class="ga">
+<a href="https://allwebcodesign.com/website-templates/business-web-templates.htm" class="GOOGLElink">Developer Layouts</a>
+Downloadable HTML and CSS websites for professional web designers.<br>
+</div>
+
+<div class="ga">
+<a href="https://allwebcodesign.com/website-templates/shopping-carts.htm" class="GOOGLElink">Shopping Cart Templates</a>
+Paypal merchant solutions for small business on-line stores.<br>
+</div>
+
+<div class="ga">
+<a href="https://allwebcodesign.com/website-templates/iPad-web-templates.htm" class="GOOGLElink">HTML5 Web Templates</a>
+Web templates configured for tablet, surface, Apple iPad and iPhone.<br>
+</div>
+
+<div class="googleadsft">&nbsp;<br></div></div>
+<!-- END GOOGLY ADS -->
+
+<br>
+
+<!-- START TALLBOY -->
+<div class="goog-tallboy" style="height: auto !important;">
+&nbsp;<br>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- tallboy -->
+<ins class="adsbygoogle" style="display: block; height: 500px; width: 250px;" data-ad-client="ca-pub-8445032878029583" data-ad-slot="2188268504" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_1_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 500px; width: 250px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_1_anchor" style="border: none; height: 500px; width: 250px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: hidden;"><iframe id="aswift_1" name="aswift_1" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 250px; height: 500px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="250" height="500" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8445032878029583&amp;output=html&amp;h=600&amp;slotname=2188268504&amp;adk=2288183264&amp;adf=2963229587&amp;pi=t.ma~as.2188268504&amp;w=250&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1586562863&amp;rafmt=1&amp;psa=0&amp;format=250x600&amp;url=https%3A%2F%2Fallwebco-templates.com%2Fsupport%2FS_script_IFrame.htm&amp;flash=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=4&amp;wgl=1&amp;uach=WyJtYWNPUyIsIjEwLjE1LjciLCJ4ODYiLCIiLCI5NS4wLjQ2MzguNjkiLFtdLG51bGwsbnVsbCwiNjQiXQ..&amp;dt=1636285372259&amp;bpp=2&amp;bdt=1644&amp;idt=178&amp;shv=r20211103&amp;mjsv=m202111020101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;correlator=4065608478654&amp;frm=20&amp;pv=2&amp;ga_vid=1409793447.1636285372&amp;ga_sid=1636285372&amp;ga_hid=861110872&amp;ga_fc=1&amp;u_tz=330&amp;u_his=2&amp;u_h=1120&amp;u_w=1792&amp;u_ah=1052&amp;u_aw=1792&amp;u_cd=30&amp;adx=865&amp;ady=1294&amp;biw=1366&amp;bih=689&amp;scr_x=0&amp;scr_y=0&amp;eid=31063412%2C31063247&amp;oid=2&amp;pvsid=1089397294990137&amp;pem=964&amp;eae=0&amp;fc=896&amp;brdim=22%2C45%2C22%2C45%2C1792%2C23%2C1366%2C768%2C1366%2C689&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;xpc=EQWwdOd1gC&amp;p=https%3A//allwebco-templates.com&amp;dtd=194" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CN2ojIOWhvQCFcuIrAIdFxYJzw" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- END TALLBOY -->
+
+<br>
+
+</div></div>
+<!-- S-B -->
+
+
+<!-- CLEAR FLOATS -->
+<div class="floatclear"></div>
+
+
+</div>
+<!-- C-O -->
+
+
+<div id="page-counter">
+<script type="text/javascript" src="https://allwebco-templates.com/cgi-bin/counter.pl/XXXiframe.cnt"></script><img src="https://allwebco-templates.com/counter/1.gif"><img src="https://allwebco-templates.com/counter/8.gif"><img src="https://allwebco-templates.com/counter/5.gif"><img src="https://allwebco-templates.com/counter/8.gif">
+</div>
+
+<script type="text/javascript" src="javascripts/footer-support.js"></script><div class="counterlink printhide" onclick="javascript:toggleDiv('page-counter');">&nbsp;</div><div id="footer-box" class="printhide"><div class="footer-line"></div><div class="footer-content"><span class="footer-title">COMPANY</span><br><a href="https://allwebco-templates.com/support/">Support Home</a><br><a href="https://allwebco-templates.com/support/contact_new_download.html">Download Request</a><br><a href="https://allwebcodesign.com/" rel="nofollow">Web Templates</a><br><a href="https://allwebco-templates.com/support/S_contact_us.htm">Contact</a><br></div><div class="footer-content"><span class="footer-title">SUPPORT</span><br><a href="https://allwebco-templates.com/support/scripts.html">Scripts &amp; Add-Ons</a><br><a href="https://allwebco-templates.com/support/S_getting_started.htm">Getting Started</a><br><a href="https://allwebco-templates.com/support/S_editing-tricks.htm">Editing Tips</a><br><a href="https://allwebco-templates.com/support/S_search_engines.htm">SEO Help</a><br></div><div class="footer-right"><a href="https://allwebcodesign.com/" rel="nofollow"><img src="https://allwebco-templates.com/support/picts/allwebco88x31-footer.gif" width="88" height="31" class="footer-icon" alt="Allwebco Design Corporation"></a><br><a href="https://allwebcodesign.com/privacy.htm" rel="nofollow"><img src="https://allwebco-templates.com/support/picts/nospam-88x31-2.gif" width="88" height="31" class="footer-icon" alt="No Spam Policy"></a><br><a href="https://allwebco-templates.com/support/search.html"><img src="https://allwebco-templates.com/support/menu-icons/icon-search.png" width="36" height="36" class="footer-icon" alt="Search"></a><br></div><div class="floatclear"></div><div class="copyright">Copyright © 2020 <a href="https://allwebcodesign.com/" rel="nofollow">Allwebco Design Corporation</a> All rights reserved. | <a href="https://allwebco-templates.com/support/terms-of-use.htm">Terms of Use</a> | <a href="https://allwebcodesign.com/privacy.htm" rel="nofollow">Privacy Policy</a><br></div></div>
+
+</div>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_2_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_2_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8445032878029583&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1586562863&amp;plat=3%3A32%2C4%3A32%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fallwebco-templates.com%2Fsupport%2FS_script_IFrame.htm&amp;ea=0&amp;flash=0&amp;pra=7&amp;wgl=1&amp;uach=WyJtYWNPUyIsIjEwLjE1LjciLCJ4ODYiLCIiLCI5NS4wLjQ2MzguNjkiLFtdLG51bGwsbnVsbCwiNjQiXQ..&amp;dt=1636285372267&amp;bpp=1&amp;bdt=1653&amp;idt=193&amp;shv=r20211103&amp;mjsv=m202111020101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=250x600&amp;nras=1&amp;correlator=4065608478654&amp;frm=20&amp;pv=1&amp;ga_vid=1409793447.1636285372&amp;ga_sid=1636285372&amp;ga_hid=861110872&amp;ga_fc=1&amp;u_tz=330&amp;u_his=2&amp;u_h=1120&amp;u_w=1792&amp;u_ah=1052&amp;u_aw=1792&amp;u_cd=30&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1366&amp;bih=689&amp;scr_x=0&amp;scr_y=0&amp;eid=31063412%2C31063247&amp;oid=2&amp;pvsid=1089397294990137&amp;pem=964&amp;eae=2&amp;fc=896&amp;brdim=22%2C45%2C22%2C45%2C1792%2C23%2C1366%2C768%2C1366%2C689&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;ifi=3&amp;uci=a!3&amp;fsb=1&amp;dtd=197" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-load-complete="true"></iframe></ins></ins></ins><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20211103/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>
